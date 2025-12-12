@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Leaf, Mail, Lock, Eye, EyeOff } from 'lucide-react';
+import { Mail, Lock, Eye, EyeOff } from 'lucide-react';
+import logoHabitus from '@/assets/logo-habitus.png';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { useApp } from '@/contexts/AppContext';
@@ -66,10 +67,11 @@ export const Login = () => {
       <div className="w-full max-w-sm animate-slide-up">
         {/* Logo */}
         <div className="flex flex-col items-center mb-8">
-          <div className="w-20 h-20 rounded-3xl bg-gradient-primary flex items-center justify-center mb-4 shadow-glow">
-            <Leaf className="w-10 h-10 text-primary-foreground" />
-          </div>
-          <h1 className="text-3xl font-bold text-gradient">Habitus</h1>
+          <img 
+            src={logoHabitus} 
+            alt="Habitus" 
+            className="h-16 mb-4"
+          />
           <p className="text-muted-foreground mt-2 text-center">
             Transforme seus hábitos, transforme sua vida
           </p>
